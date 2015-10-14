@@ -1,0 +1,3 @@
+# Enable key repeat
+# Disable character accent menu
+defaults write -g ApplePressAndHoldEnabled -bool false
