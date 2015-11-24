@@ -34,3 +34,6 @@ export PIP_REQUIRE_VIRTUALENV=true
 gpip(){
 	PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+# Add global node modules to Node.js path for use in REPL
+export NODE_PATH=$NODE_PATH:/usr/lib/node_modules
