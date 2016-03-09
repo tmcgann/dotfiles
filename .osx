@@ -30,3 +30,7 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Enable selection of text in Quick Look previews (doesn't work in El Capitan)
 #defaults write com.apple.finder QLEnableTextSelection -bool true
+
+# Disable the Control-Command-D binding for Dictionary definition lookup
+# https://apple.stackexchange.com/questions/22785/how-do-i-disable-the-command-control-d-word-definition-keyboard-shortcut-in-os-x
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
