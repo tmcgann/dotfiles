@@ -103,6 +103,22 @@ else
 	hostStyle="${yellow}";
 fi;
 
+# auto-activate Python virtual environments
+activate_venv() {
+  if [ -f ./env/bin/activate ]
+  then
+    . ./env/bin/activate
+    #hash -r
+  else
+    if (type deactivate >/dev/null 2>&1)
+    then
+      deactivate
+      #hash -r
+    fi
+  fi
+}
+export PROMPT_COMMAND="activate_venv"
+
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
 PS1+="\[${bold}\]\n"; # newline

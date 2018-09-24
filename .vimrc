@@ -1,9 +1,95 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+" VIM Configuration - Taylor McGann
 
-" Make Vim more useful
+" Activate Pathogen--package manager
+call pathogen#infect()
+
+" Enable file type detection
+filetype on
+filetype plugin indent on
+
+"""""""""""""""
+""" Display """
+"""""""""""""""
+
+" Enable syntax highlighting
+syntax on
+
+" Set Solarized theme
+"let g:solarized_termtrans=1
+"set background=dark
+"colorscheme solarized
+
+" Set Oceanic Next theme
+"let g:base16_shell_path=base16-builder/output/shell/
+"let g:oceanic_next_terminal_bold = 1
+"let g:oceanic_next_terminal_italic = 1
+set background=dark
+colorscheme OceanicNext
+
+" Not sure what this does :)
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" Set font
+set guifont=menlo:h12
+set antialias
+
+" Show the filename in the window titlebar
+set title
+
+" Enable line numbers
+set number
+
+" Show the cursor position
+set ruler
+
+" Highlight current line
+set cursorline
+
+" Set no underline for line highlight
+highlight CursorLine cterm=none
+
+" Don’t reset cursor to start of line when moving around.
+set nostartofline
+
+" Make tabs as wide as four spaces
+set tabstop=4
+
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+
+" On pressing tab, insert 4 spaces
+set expandtab
+
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+
+" Enable the toolbar
+"set guioptions=T
+
+""""""""""""""
+""" Search """
+""""""""""""""
+
+" Ignore case of searches
+set ignorecase
+
+" Uppercase characters in search terms are case sensitive
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Highlight search results as pattern is typed
+set incsearch
+
+""""""""""""
+""" Misc """
+""""""""""""
+
+" Make Vim more useful; cancels compatibility with Vi
 set nocompatible
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -30,10 +116,6 @@ set encoding=utf-8 nobomb
 " Change mapleader
 "let mapleader=","
 
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
-
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -44,38 +126,17 @@ endif
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
 
-" Respect modeline in files
-set modeline
-set modelines=4
-
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
 
-" Enable line numbers
-set number
+" Respect modeline in files
+set modeline
+set modelines=4
 
-" Enable syntax highlighting
-syntax on
-
-" Highlight current line
-set cursorline
-
-" Make tabs as wide as four spaces
-set tabstop=4
-
-" Show “invisible” characters
-"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-"set list
-
-" Highlight searches
-set hlsearch
-
-" Ignore case of searches
-set ignorecase
-
-" Highlight dynamically as pattern is typed
-set incsearch
+" Don’t add empty newlines at the end of files
+set binary
+set noeol
 
 " Always show status line
 set laststatus=2
@@ -86,20 +147,11 @@ set mouse=a
 " Disable error bells
 set noerrorbells
 
-" Don’t reset cursor to start of line when moving around.
-set nostartofline
-
-" Show the cursor position
-set ruler
-
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 
 " Show the current mode
 set showmode
-
-" Show the filename in the window titlebar
-set title
 
 " Show the (partial) command as it’s being typed
 set showcmd
@@ -128,11 +180,8 @@ noremap <leader>ss :call StripWhitespace()<CR>
 
 " Automatic commands
 if has("autocmd")
-	" Enable file type detection
-	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
-

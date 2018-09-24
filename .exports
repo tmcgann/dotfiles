@@ -1,3 +1,5 @@
+# Prompt related exports like PROMPT_COMMAND and PS1 can be found in `.bash_prompt`
+
 # Show dirty state in prompt when in Git repos
 export GIT_PS1_SHOWDIRTYSTATE=1
 
@@ -5,9 +7,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export EDITOR='vim';
 
 # Enable persistent REPL history for `node`.
-NODE_REPL_HISTORY_FILE=~/.node_history;
+export NODE_REPL_HISTORY_FILE=~/.node_history;
 # Allow 32³ entries; the default is 1000.
-NODE_REPL_HISTORY_SIZE='32768';
+export NODE_REPL_HISTORY_SIZE='32768';
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
@@ -34,6 +36,17 @@ export PIP_REQUIRE_VIRTUALENV=true
 gpip(){
 	PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+gpip3(){
+	PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
+}
 
 # Add global node modules to Node.js path for use in REPL
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+
+# PostgreSQL
+export PGDATA=/usr/local/pgsql/data
+export PGLOG=/usr/local/pgsql/postgres.log #non-standard var
+
+# Go
+export GOPATH=$HOME/projects/go
+export GOBIN=$GOPATH/bin
