@@ -9,9 +9,3 @@ export PATH="$PATH:`yarn global bin`";
 
 # Favor Brew's OpenSSL over Apple's
 export PATH="/usr/local/opt/openssl/bin:$PATH"
-
-# Add Python2 to PATH
-export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
-
-# Add the Python user install directory (i.e. Python packages installed via pip with the `--user` flag)
-export PATH="$PATH:/Users/taylor/Library/Python/2.7/bin"
