@@ -36,11 +36,10 @@ brew install findutils
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+brew install vim --with-override-system-vi
+brew install grep --with-default-names
+brew install openssh
+brew install openssl@1.1
 
 # Install font tools.
 #brew tap bramstein/webfonttools
@@ -53,14 +52,12 @@ brew install homebrew/php/php55 --with-gmp
 #brew install dark-mode
 #brew install exiv2
 brew install git
-#brew install git-lfs
-brew install imagemagick --with-webp
+#brew install imagemagick --with-webp
 #brew install p7zip
-#brew install rename
-#brew install speedtest_cli
-#brew install ssh-copy-id
+brew install ssh-copy-id
 #brew install tree
 #brew install webkit2png
+brew install htop
 
 # Remove outdated versions from the cellar.
 brew cleanup
