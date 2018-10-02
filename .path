@@ -4,8 +4,5 @@ export PATH="$HOME/bin:$PATH";
 # Add `/usr/local/sbin` to the `$PATH`
 export PATH="$PATH:/usr/local/sbin";
 
-# Add Yarn binaries to the `$PATH`
-export PATH="$PATH:`yarn global bin`";
-
 # Favor Brew's OpenSSL over Apple's
 export PATH="/usr/local/opt/openssl/bin:$PATH"
