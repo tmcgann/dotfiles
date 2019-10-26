@@ -1,11 +1,37 @@
 " VIM Configuration - Taylor McGann
 
-" Activate Pathogen--package manager
-"call pathogen#infect()
+set nocompatible             " be iMproved, required for Vundle
+filetype off                 " required for Vundle
 
-" Enable file type detection
-filetype on
-filetype plugin indent on
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Wrapper for Git commands: https://github.com/tpope/vim-fugitive
+Plugin 'tpope/vim-fugitive'
+
+" JavaScript syntax: https://github.com/othree/yajs.vim
+"Plugin 'othree/yajs.vim'
+
+" HTML syntax: https://github.com/othree/html5.vim
+"Plugin 'othree/html5.vim'
+
+" TypeScript syntax: https://github.com/HerringtonDarkholme/yats.vim/
+"Plugin 'HerringtonDarkholme/yats.vim'
+
+" Polyglot syntax: https://github.com/sheerun/vim-polyglot
+Plugin 'sheerun/vim-polyglot'
+
+" Themes
+" OceanicNext: https://github.com/mhartington/oceanic-next
+Plugin 'mhartington/oceanic-next'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required for Vundle
+filetype plugin indent on    " required for Vundle
 
 """""""""""""""
 """ Display """
@@ -14,22 +40,22 @@ filetype plugin indent on
 " Enable syntax highlighting
 syntax on
 
+" Not sure what this does :)
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 " Set Solarized theme
 "let g:solarized_termtrans=1
 "set background=dark
 "colorscheme solarized
 
-" Set Oceanic Next theme
+" Set up Oceanic Next theme
 "let g:base16_shell_path=base16-builder/output/shell/
-"let g:oceanic_next_terminal_bold = 1
-"let g:oceanic_next_terminal_italic = 1
-"set background=dark
-"colorscheme OceanicNext
-
-" Not sure what this does :)
-if (has("termguicolors"))
-  set termguicolors
-endif
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+set background=dark
+colorscheme OceanicNext
 
 " Set font
 set guifont=menlo:h12
