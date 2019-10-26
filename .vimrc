@@ -1,7 +1,7 @@
 " VIM Configuration - Taylor McGann
 
 " Activate Pathogen--package manager
-call pathogen#infect()
+"call pathogen#infect()
 
 " Enable file type detection
 filetype on
@@ -23,8 +23,8 @@ syntax on
 "let g:base16_shell_path=base16-builder/output/shell/
 "let g:oceanic_next_terminal_bold = 1
 "let g:oceanic_next_terminal_italic = 1
-set background=dark
-colorscheme OceanicNext
+"set background=dark
+"colorscheme OceanicNext
 
 " Not sure what this does :)
 if (has("termguicolors"))
@@ -45,7 +45,7 @@ set number
 set ruler
 
 " Highlight current line
-set cursorline
+"set cursorline
 
 " Set no underline for line highlight
 highlight CursorLine cterm=none

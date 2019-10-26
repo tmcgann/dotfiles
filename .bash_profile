@@ -28,3 +28,13 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_c
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
+
+# Add tab completion for AWS CLI
+if which brew > /dev/null && [ -f "$(brew --prefix)/bin/aws_completer" ]; then
+	complete -C "$(brew --prefix)/bin/aws_completer" aws;
+fi
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Applications/google-cloud-sdk/path.bash.inc' ]; then . '/Applications/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Applications/google-cloud-sdk/completion.bash.inc' ]; then . '/Applications/google-cloud-sdk/completion.bash.inc'; fi

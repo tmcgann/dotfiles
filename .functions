@@ -191,3 +191,19 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function e64() {
+	echo "$@" | base64;
+}
+
+function d64() {
+	echo "$@" | base64 -D;
+}
+
+function jwt() {
+	local header=$(echo "$@" | cut -f1 -d.);
+	local payload=$(echo "$@" | cut -f2 -d.);
+	echo
+	echo "HEADER: $(d64 $header)";
+	echo "PAYLOAD: $(d64 $payload)";
+}

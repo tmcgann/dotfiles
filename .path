@@ -1,8 +1,18 @@
-# Add `~/bin` to the `$PATH`
+# Add `~/bin`
 export PATH="$HOME/bin:$PATH";
 
-# Add `/usr/local/sbin` to the `$PATH`
+# Add `/usr/local/sbin`
 export PATH="$PATH:/usr/local/sbin";
 
-# Favor Brew's OpenSSL over Apple's
+# Use Homebrew's version of X
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+# Add Brew's PHP binaries
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+
+# Add PHP composer binaries
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+

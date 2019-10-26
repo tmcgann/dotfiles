@@ -27,9 +27,6 @@ export LESS_TERMCAP_md="${yellow}";
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
-# Always enable colored `grep` output.
-export GREP_OPTIONS='--color=auto';
-
 # pip should only run if there is a virtualenv currently activated
 # use gpip if you must install globally
 export PIP_REQUIRE_VIRTUALENV=true
