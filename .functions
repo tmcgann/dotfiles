@@ -207,3 +207,12 @@ function jwt() {
 	echo "HEADER: $(d64 $header)";
 	echo "PAYLOAD: $(d64 $payload)";
 }
+
+function hex() {
+	printf \#%02X%02X%02X $@
+}
+
+function rgb() {
+	hex=$(echo "$1" | sed -e '/#/s/^.//');
+	printf "rgb(%d, %d, %d)\n" 0x${hex:0:2} 0x${hex:2:2} 0x${hex:4:2}
+}

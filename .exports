@@ -45,5 +45,5 @@ export PGDATA=/usr/local/pgsql/data
 export PGLOG=/usr/local/pgsql/postgres.log #non-standard var
 
 # Go
-export GOPATH=$HOME/projects/go
-export GOBIN=$GOPATH/bin
+#export GOPATH=$HOME/projects/go
+#export GOBIN=$GOPATH/bin

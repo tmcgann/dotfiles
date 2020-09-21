@@ -3,8 +3,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-#alias ~="cd ~" # `cd` is probably faster to type though
-#alias -- -="cd -"
 
 # Shortcuts
 alias dr="cd ~/Dropbox"
@@ -15,11 +13,8 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 
-# Claravine shortcuts
-alias cv="cd ~/projects/claravine"
-alias girona="cd ~/projects/claravine/tf-girona"
-alias wf="cd ~/projects/claravine/workfront-integration"
-alias tf="cd ~/projects/personal/taskfolio"
+# Taskfolio shortcuts
+alias tf="cd ~/projects/taskfolio"
 
 # Git shortcuts
 alias gst='git status'
@@ -155,3 +150,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Homegrown URL shortener
+alias shorten="pushd ~/projects/personal/netlify-url-shortener && npm run shorten \"$1\" \"$2\" && popd"

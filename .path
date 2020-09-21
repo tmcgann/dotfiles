@@ -15,4 +15,3 @@ export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 
 # Add PHP composer binaries
 export PATH="$HOME/.composer/vendor/bin:$PATH"
-
